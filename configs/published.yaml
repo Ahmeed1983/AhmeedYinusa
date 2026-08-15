@@ -1,0 +1,55 @@
+project: brain-tumor-adversarial-robustness
+source_status: reconstructed_from_archived_notebooks_and_published_methodology
+
+data:
+  image_size: [128, 128]
+  channels: 3
+  classes: [glioma, meningioma, pituitary, no_tumor]
+  validation_fraction: 0.20
+  normalization: unit_interval
+
+model:
+  backbone: VGG16
+  pretrained_weights: imagenet
+  dense_units: 128
+  dropout: 0.5
+  initial_epochs: 5
+  fine_tune_last_layers: 10
+  fine_tune_epochs: 10
+  initial_learning_rate: 0.001
+  fine_tune_learning_rate: 0.001
+
+attacks:
+  pre_defense:
+    fgsm:
+      epsilon: 0.01
+    pgd:
+      epsilon: 0.01
+      alpha: 0.002
+      steps: 10
+  simulation_1:
+    fgsm:
+      epsilon: 0.05
+    pgd:
+      epsilon: 0.05
+      alpha: 0.04
+      steps: 10
+
+feature_squeezing:
+  bit_depth: 4
+  gaussian_kernel_size: 3
+  gaussian_sigma: null
+
+adversarial_training:
+  epochs: 10
+
+publication_reference_accuracy:
+  clean_baseline: 0.96
+  fgsm_before_defense: 0.32
+  pgd_before_defense: 0.13
+  fgsm_after_defense: 0.54
+  pgd_after_defense: 0.47
+
+notes:
+  - gaussian_sigma remains null because the recovered final publication text does not provide one unambiguous numerical value.
+  - archived notebooks often used a fine-tuning learning rate of 1e-5, while the final paper text reports 1e-3. This published configuration follows the paper.
