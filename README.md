@@ -1,84 +1,115 @@
-# Brain Tumor MRI Adversarial Robustness
+# Research Publications and Code Availability
 
-Research code supporting the published study **“A Multi-Layered Defense Against Adversarial Attacks in Brain Tumor Classification Using Ensemble Adversarial Training and Feature Squeezing”** (*Scientific Reports*, 2025).
+This repository provides a concise overview of my peer-reviewed publications, accepted conference papers, and selected scholarly work across trustworthy artificial intelligence, medical imaging, healthcare systems, high-performance computing, population health, quantum machine learning, cybersecurity, and post-quantum security.
 
-## Research Problem
+## Code Availability Policy
 
-Deep-learning models for medical-image classification can be highly accurate on clean images while remaining vulnerable to small adversarial perturbations. This project studies that problem in four-class brain-tumor MRI classification and evaluates a multilayer defense combining adversarial training with feature squeezing.
+Only complete research code or complete notebooks that can be confidently associated with a study are posted publicly. I do not add substitute implementations simply to make every publication appear to have a code repository.
 
-## Published Method Represented Here
+For studies whose complete implementation is not publicly posted, researchers may contact the author to request additional notebooks, scripts, models, configuration details, or supporting materials when available and shareable. Availability may depend on the materials retained from the study and on applicable data, licensing, coauthor, institutional, or publication restrictions.
 
-- **Task:** four-class brain-tumor MRI classification
-- **Backbone:** ImageNet-pretrained VGG16
-- **Input:** 128 × 128 normalized MRI images
-- **Classifier head:** Global Average Pooling, Dense 128 with ReLU, Dropout 0.5, four-class softmax
-- **Attacks:** FGSM and PGD
-- **Defense:** adversarial training plus feature squeezing
-- **Feature squeezing:** 4-bit reduction and 3 × 3 Gaussian blurring
+## Peer-Reviewed Journal Articles
 
-The paper reports the following reference results:
+### 1. A Multi-Layered Defense Against Adversarial Attacks in Brain Tumor Classification Using Ensemble Adversarial Training and Feature Squeezing
+**Yinusa, A., & Faezipour, M. (2025). Scientific Reports, 15, 16804.**
 
-| Evaluation | Accuracy |
-|---|---:|
-| Clean baseline | 96% |
-| FGSM before defense | 32% |
-| PGD before defense | 13% |
-| FGSM after defense | 54% |
-| PGD after defense | 47% |
+This study investigates the robustness of brain-tumor MRI classification under FGSM and PGD adversarial perturbations and evaluates a defense framework combining ensemble adversarial training and feature squeezing.
 
-These values are included as publication reference targets.
+**Code availability:** A complete publication code package is not posted here. Researchers may request supporting implementation materials when available and shareable.
 
-## Repository Structure
+### 2. Enhancing the Robustness of CNN-Based Lung Cancer Detection Models Against Label-Flipping Poison Attacks Using Defensive Distillation
+**Yinusa, A., & Faezipour, M. (2025). Array, 100637.**
 
-```text
-configs/
-  published.yaml
-src/brain_tumor_robustness/
-  models.py
-  attacks.py
-  defenses.py
-PUBLICATION.md
-PROVENANCE.md
-CITATION.cff
-LICENSE_STATUS.md
-requirements.txt
-.gitignore
-```
+This work examines label-flipping poisoning attacks against CNN-based lung-cancer detection and studies defensive distillation as a method for improving model robustness.
 
-## Quick Start
+**Code availability:** A complete publication notebook or code package is not posted here. Researchers may request supporting implementation materials when available and shareable.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+### 3. Optimizing Healthcare Delivery: A Model for Staffing, Patient Assignment, and Resource Allocation
+**Yinusa, A., & Faezipour, M. (2023). Applied System Innovation, 6(5), 78.**
 
-The code modules can then be imported from `src/brain_tumor_robustness/` for training, attack generation, feature squeezing, and paper-aligned experimentation.
+This study develops an optimization framework for healthcare staffing, patient assignment, resource allocation, and related operational decisions.
 
-## Data
+**Code availability:** Complete publication materials are not posted here. Researchers may request the available computational materials for research use.
 
-The publication uses the public Kaggle **Brain Tumor MRI Dataset** (`masoudnickparvar/brain-tumor-mri-dataset`), a composite collection of 7,023 MRI images derived from Figshare, SARTAJ, and Br35H sources. The dataset is not redistributed here.
+### 4. Minimization of High Computational Cost in Data Preprocessing and Modeling Using MPI4Py
+**Oluwasakin, E., Torku, T., Tingting, S., Yinusa, A., Hamdan, S., Poudel, S., et al. (2023). Machine Learning with Applications, 13, 100483.**
 
-Credentials, API keys, private configuration files, and restricted materials are not included in the public repository.
+This work studies parallel computing with MPI4Py as a strategy for reducing computational cost in data preprocessing and modeling workflows.
 
-## Reproducibility Note
+**Code availability:** No complete publication code package is posted here. Supporting materials may be requested from the authors where available.
 
-Implementation details, publication parameters, and the relationship between experimental development and the final methodology are documented in [`PROVENANCE.md`](PROVENANCE.md) and [`PUBLICATION.md`](PUBLICATION.md).
+### 5. A Study on CKD Progression and Health Disparities Using System Dynamics Modeling
+**Yinusa, A., Faezipour, M., & Faezipour, M. (2022). Healthcare, 10(9), 1628.**
 
-Where a publication parameter is not explicitly documented in the available research record, the repository identifies that limitation rather than presenting an unverified value as confirmed.
+This study applies system dynamics modeling to chronic kidney disease progression and healthcare disparities.
 
-## Code and Materials Availability
+**Code availability:** A complete executable model is not publicly posted here. Researchers may request supporting model materials when available and shareable.
 
-This repository contains the public research implementation and selected supporting scripts for the study. **Additional or more complete implementation materials, research notebooks, configuration details, and supporting files may be requested from the author when available and shareable.** Availability may depend on what was retained from the original study and on applicable data, licensing, coauthor, or sharing restrictions.
+## Peer-Reviewed Conference Proceedings, Papers, and Abstracts
 
-## Citation
+### 6. AI-Driven Medical Diagnostics with Improved Robustness to Adversarial Perturbations
+**Yinusa, A., & Faezipour, M. (2025). International Conference on Artificial Intelligence, Computer, Data Science, and Applications.**
 
-If you use this code, please cite the associated publication. Citation metadata are provided in [`CITATION.cff`](CITATION.cff).
+This study evaluates adversarial robustness in AI-based medical diagnostics and investigates methods for improving resistance to adversarial perturbations.
 
-## License Status
+**Code availability:** A complete publication source package is not posted here. Researchers may request supporting implementation materials when available and shareable.
 
-No software license has been selected for this public research-code release. See [`LICENSE_STATUS.md`](LICENSE_STATUS.md) before reuse or redistribution.
+### 7. Evaluating Artificial Intelligence Robustness Against FGSM and PGD Adversarial Attacks with L-Norm Perturbations
+**Yinusa, A., & Faezipour, M. (2025). Applied Cognitive Computing and Artificial Intelligence, CSCE 2024, 2251.**
 
-## Authors
+This study evaluates DenseNet161 under FGSM and PGD attacks with L1, L2, and L-infinity perturbation settings and examines adversarial training for improved robustness.
 
-**Ahmeed Adekunle Yinusa** and **Misa Faezipour**
+**Complete research code:** [Adversarial-Attacks-on-Deep-Learning-Model](https://github.com/Ahmeed1983/Adversarial-Attacks-on-Deep-Learning-Model)
+
+### 8. Enhancing Occupational Health and Safety in Industrial Workplaces Through System Dynamics Modeling
+**Yinusa, A. A. (2024). Proceedings of the International Annual Conference of the American Society for Engineering Management.**
+
+This work applies system dynamics modeling to occupational health and safety in industrial workplaces.
+
+**Code availability:** No complete executable model is posted here. Researchers may request supporting research materials when available and shareable.
+
+### 9. Unveiling Inequity: State-by-State Disparities in Years of Potential Life Lost by Race
+**Yinusa, A., & Faezipour, M. (2024). 5th National Big Data Health Science Conference, 18(Supplement 8), P30.**
+
+This study examines racial disparities in years of potential life lost across U.S. states using population-health data analysis.
+
+**Code availability:** A complete analysis notebook is not publicly posted here. Researchers may request supporting analytical materials when available and shareable.
+
+## Accepted Conference Papers
+
+### 10. Post-Quantum Medical Imaging Security: A Survey of Architectures and Migration Trade-Offs
+**Yinusa, A., Poudel, K., Faezipour, M., & Jones, C. (Accepted, 2026). IEEE International Conference on Quantum Computing and Engineering, Paper ID 1170.**
+
+This survey examines post-quantum security architectures, cryptographic agility, migration pathways, and operational trade-offs for medical-imaging systems.
+
+**Supporting materials:** Research notes and related supporting materials may be requested where available. Code is not presented as a required output of this survey study.
+
+### 11. Performance Evaluation and Noise Robustness Analysis of Quantum Deep Learning Architectures for Brain MRI Tumor Classification
+**Yinusa, A., & Faezipour, M. (Accepted, 2026). 6th International Conference on Electrical, Computer, Communications and Mechatronics Engineering.**
+
+This work evaluates quantum deep-learning architectures for brain MRI tumor classification with emphasis on performance and robustness under quantum noise.
+
+**Code availability:** A complete publication notebook is not publicly posted here. Researchers may request supporting implementation materials when available and shareable.
+
+## Thesis and Institutional Scholarly Work
+
+### 12. The Application of Systems Engineering to Address CKD Healthcare Disparities
+**Yinusa, A. A. (2021). Middle Tennessee State University.**
+
+This thesis applies systems engineering methods to chronic kidney disease healthcare disparities and forms part of the foundation for later system-dynamics research in CKD.
+
+**Materials availability:** Supporting thesis research materials may be requested when available and shareable.
+
+## Public Research Code Currently Available
+
+The publication-linked repository currently presented as complete public research code is:
+
+- [Adversarial-Attacks-on-Deep-Learning-Model](https://github.com/Ahmeed1983/Adversarial-Attacks-on-Deep-Learning-Model), associated with the FGSM/PGD L-norm robustness study.
+
+Additional non-publication software and computational projects are available through the main [GitHub profile](https://github.com/Ahmeed1983).
+
+## Author
+
+**Ahmeed Adekunle Yinusa**  
+Computational & Data Science  
+Middle Tennessee State University
