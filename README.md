@@ -15,7 +15,7 @@ For other studies, researchers are welcome to request notebooks, scripts, models
 
 This study investigates the robustness of brain-tumor MRI classification under FGSM and PGD adversarial perturbations and evaluates a defense framework combining ensemble adversarial training and feature squeezing.
 
-**Research materials:** Supporting implementation materials may be requested for research use when available and shareable.
+**Research notebook:** [BRAIN_TUMOR_ADVERSARIAL_ATTACKS.ipynb](notebooks/BRAIN_TUMOR_ADVERSARIAL_ATTACKS.ipynb) contains the VGG16 brain-tumor classification workflow, FGSM and PGD attack implementations, adversarial training, robustness evaluation, classification reports, confusion matrices, and prediction-confidence analysis. Additional supporting materials associated with the broader study may be requested when available and shareable.
 
 ### 2. Enhancing the Robustness of CNN-Based Lung Cancer Detection Models Against Label-Flipping Poison Attacks Using Defensive Distillation
 **Yinusa, A., & Faezipour, M. (2025). Array, 100637.**
@@ -100,10 +100,9 @@ This thesis applies systems engineering methods to chronic kidney disease health
 
 **Research materials:** Supporting thesis materials may be requested when available and shareable.
 
-## Public Research Code Currently Available
+## Public Research Code and Notebooks Currently Available
 
-The publication-linked repository currently presented as complete public research code is:
-
+- [Brain Tumor MRI Adversarial Attacks Notebook](notebooks/BRAIN_TUMOR_ADVERSARIAL_ATTACKS.ipynb), supporting the brain-tumor adversarial-robustness research workflow with VGG16, FGSM, PGD, adversarial training, and robustness evaluation.
 - [Adversarial-Attacks-on-Deep-Learning-Model](https://github.com/Ahmeed1983/Adversarial-Attacks-on-Deep-Learning-Model), associated with the FGSM/PGD L-norm robustness study.
 
 Additional software and computational projects are available through the main [GitHub profile](https://github.com/Ahmeed1983).
