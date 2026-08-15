@@ -1,0 +1,52 @@
+provenance: published_method
+
+dataset:
+  name: IQ-OTH/NCCD Lung Cancer Dataset
+  image_count: 1190
+  patient_count: 110
+  image_size: 256
+  grayscale: true
+  normalize: min_max
+  gaussian_preprocessing_sigma: null
+  validation_fraction: null
+  class_names: [benign, malignant, normal]
+  folder_aliases:
+    benign: "Bengin cases"
+    malignant: "Malignant cases"
+    normal: "Normal cases"
+
+balance:
+  method: SMOTE
+
+baseline_model:
+  conv_filters: [64, 64]
+  kernel_size: 3
+  pooling_size: 2
+  dropout: 0.5
+  dense_units: 16
+  output_classes: 3
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 8
+  epochs: 50
+  loss: sparse_categorical_crossentropy
+
+poisoning:
+  fraction: 0.30
+  mode: random_uniform_other_class
+  manuscript_alternative_mode: cyclic_plus_two
+
+defense:
+  teacher_on_clean_smote_data: true
+  temperature: 10.0
+  label_smoothing: 0.1
+  isolation_forest_contamination: 0.1
+  mixup_alpha: null
+  sce_alpha_ce: 0.1
+  sce_beta_rce: 1.0
+  randomized_smoothing_sigma: 0.01
+  randomized_smoothing_samples: null
+
+reported_reference_metrics:
+  robust_clean_accuracy: 0.99
+  robust_poisoned_accuracy_range: [0.95, 0.96]
