@@ -2,17 +2,17 @@
 
 Research code associated with **“Optimizing Healthcare Delivery: A Model for Staffing, Patient Assignment, and Resource Allocation”** (*Applied System Innovation*, 2023).
 
-This project formulates healthcare staffing, patient assignment, resource allocation, and overtime decisions as a mathematical optimization problem implemented with Gurobi. The code here is reconstructed from the recovered HTML export of the original Jupyter notebook and is presented with provenance notes rather than rewritten as if it were a new implementation.
+This project presents the computational optimization framework used to study healthcare staffing, patient assignment, resource allocation, and overtime decisions with Gurobi.
 
-## What is included
+## What Is Included
 
-- `src/recovered_notebook_model.py` preserves the principal optimization model recovered from the notebook export.
-- `FORMULATION_NOTES.md` explains important modeling and reproducibility details that should be understood before interpreting or extending the code.
+- `src/recovered_notebook_model.py` contains the principal optimization model available from the original computational workflow.
+- `FORMULATION_NOTES.md` documents modeling and reproducibility details that should be understood before interpreting or extending the code.
 - `requirements.txt` lists the core Python dependencies.
 
-## Model elements
+## Model Elements
 
-The recovered notebook defines:
+The computational model includes:
 
 - 30 staff members
 - 5 time slots
@@ -27,11 +27,11 @@ The recovered notebook defines:
 
 The objective combines staff workload, staff interaction terms, patient costs, resource costs, patient-quality terms, overtime, staff-patient assignment costs, and staff-satisfaction terms.
 
-## Important reproducibility note
+## Reproducibility Note
 
-The recovered notebook generates simulated coefficients using Python's `random.randint` without a fixed random seed. Therefore a fresh run will not necessarily regenerate the exact numerical objective values reported in the paper unless the original generated inputs are also recovered.
+The available computational workflow generates simulated coefficients using Python's `random.randint` without a fixed random seed. Therefore, a fresh run may not regenerate the exact numerical objective values reported in the paper unless the original generated inputs are also available.
 
-The objective also contains products of binary variables `x[i,t] * x[j,t]`. Although the publication describes the model as mixed-integer linear programming, that term is quadratic as written in the recovered code. This repository preserves the recovered formulation and documents the issue rather than silently changing the published model.
+The objective also contains products of binary variables `x[i,t] * x[j,t]`. Although the publication describes the model as mixed-integer linear programming, that term is quadratic as written in the available model. This is documented in `FORMULATION_NOTES.md` for transparency.
 
 ## Running
 
@@ -44,11 +44,15 @@ python src/recovered_notebook_model.py
 
 ## Data
 
-The study uses simulated input data. No patient-level confidential dataset is required for the recovered model.
+The study uses simulated input data. No patient-level confidential dataset is required for the available model.
 
-## Research integrity
+## Code and Materials Availability
 
-This release is intended to make the actual computational artifact inspectable. Corrections, linearizations, deterministic replicas, or alternative formulations should be developed as clearly labeled extensions rather than silently replacing the recovered research model.
+This repository contains the public computational implementation currently available for the study. **Additional or more complete scripts, notebooks, generated inputs, and supporting research materials may be requested from the author when available and shareable.** Availability may depend on what was retained from the original study and on applicable licensing or sharing restrictions.
+
+## Research Use
+
+Researchers extending this work should clearly distinguish the published formulation from any later corrections, linearizations, deterministic replicas, or alternative formulations.
 
 ## Authors
 
