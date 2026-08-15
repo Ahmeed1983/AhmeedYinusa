@@ -1,8 +1,6 @@
 # Brain Tumor MRI Adversarial Robustness
 
-Research code aligned with the published study **“A Multi-Layered Defense Against Adversarial Attacks in Brain Tumor Classification Using Ensemble Adversarial Training and Feature Squeezing”** (*Scientific Reports*, 2025).
-
-This repository presents a clean, publication-aligned implementation reconstructed from archived experimental notebooks and the final published methodology. It is intentionally described as a reconstructed research-code release rather than as the untouched original notebook used during publication.
+Research code supporting the published study **“A Multi-Layered Defense Against Adversarial Attacks in Brain Tumor Classification Using Ensemble Adversarial Training and Feature Squeezing”** (*Scientific Reports*, 2025).
 
 ## Research Problem
 
@@ -28,7 +26,7 @@ The paper reports the following reference results:
 | FGSM after defense | 54% |
 | PGD after defense | 47% |
 
-These values are publication reference targets, not freshly regenerated results from this repository.
+These values are included as publication reference targets.
 
 ## Repository Structure
 
@@ -61,19 +59,17 @@ The code modules can then be imported from `src/brain_tumor_robustness/` for tra
 
 The publication uses the public Kaggle **Brain Tumor MRI Dataset** (`masoudnickparvar/brain-tumor-mri-dataset`), a composite collection of 7,023 MRI images derived from Figshare, SARTAJ, and Br35H sources. The dataset is not redistributed here.
 
-Do not commit datasets, model checkpoints, credentials, or `kaggle.json` files to this repository.
+Credentials, API keys, private configuration files, and restricted materials are not included in the public repository.
 
-## Reproducibility and Provenance
+## Reproducibility Note
 
-The archived notebooks document genuine experimental development, but they are not a single one-to-one executable snapshot of the final paper. The clean `src/` modules follow the publication where the final paper is explicit and expose unresolved values instead of silently inventing them.
+Implementation details, publication parameters, and the relationship between experimental development and the final methodology are documented in [`PROVENANCE.md`](PROVENANCE.md) and [`PUBLICATION.md`](PUBLICATION.md).
 
-One example is Gaussian feature squeezing. The final paper specifies a 3 × 3 Gaussian blur but the recovered publication text does not provide one unambiguous numerical standard deviation. Therefore `configs/published.yaml` leaves `gaussian_sigma` unset.
+Where a publication parameter is not explicitly documented in the available research record, the repository identifies that limitation rather than presenting an unverified value as confirmed.
 
-See [`PROVENANCE.md`](PROVENANCE.md) and [`PUBLICATION.md`](PUBLICATION.md) for the paper-to-code mapping and documented differences between archived experimentation and the final publication.
+## Code and Materials Availability
 
-## Research Integrity
-
-This repository distinguishes publication-aligned implementation from historical experimental development. It does not claim that the cleaned modules are the untouched original publication source code.
+This repository contains the public research implementation and selected supporting scripts for the study. **Additional or more complete implementation materials, research notebooks, configuration details, and supporting files may be requested from the author when available and shareable.** Availability may depend on what was retained from the original study and on applicable data, licensing, coauthor, or sharing restrictions.
 
 ## Citation
 
@@ -81,7 +77,7 @@ If you use this code, please cite the associated publication. Citation metadata 
 
 ## License Status
 
-No software license has been selected for this reconstructed public research-code release. See [`LICENSE_STATUS.md`](LICENSE_STATUS.md) before reuse or redistribution.
+No software license has been selected for this public research-code release. See [`LICENSE_STATUS.md`](LICENSE_STATUS.md) before reuse or redistribution.
 
 ## Authors
 
