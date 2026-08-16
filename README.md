@@ -50,9 +50,9 @@ This study applies system dynamics modeling to chronic kidney disease progressio
 ### 6. AI-Driven Medical Diagnostics with Improved Robustness to Adversarial Perturbations
 **Yinusa, A., & Faezipour, M. (2025). International Conference on Artificial Intelligence, Computer, Data Science, and Applications.**
 
-This study evaluates adversarial robustness in AI-based medical diagnostics and investigates methods for improving resistance to adversarial perturbations.
+This study evaluates adversarial robustness in AI-based medical diagnostics using lung CT classification, FGSM and PGD perturbations, defensive distillation, adversarial training, and robustness evaluation.
 
-**Research materials:** Supporting implementation materials may be requested for research use when available and shareable.
+**Complete research notebook:** [LUNG_CANCER_ADVERSARIAL_ROBUSTNESS.ipynb](notebooks/LUNG_CANCER_ADVERSARIAL_ROBUSTNESS.ipynb)
 
 ### 7. Evaluating Artificial Intelligence Robustness Against FGSM and PGD Adversarial Attacks with L-Norm Perturbations
 **Yinusa, A., & Faezipour, M. (2025). Applied Cognitive Computing and Artificial Intelligence, CSCE 2024, 2251.**
@@ -102,6 +102,7 @@ This thesis applies systems engineering methods to chronic kidney disease health
 
 ## Public Research Code and Notebooks Currently Available
 
+- [Lung Cancer CT Adversarial Robustness Notebook](notebooks/LUNG_CANCER_ADVERSARIAL_ROBUSTNESS.ipynb), containing the complete three-class lung CT workflow with SMOTE, FGSM, PGD, defensive distillation, adversarial training, symmetric cross-entropy, and robustness evaluation.
 - [Brain Tumor MRI Adversarial Attacks Notebook](notebooks/BRAIN_TUMOR_ADVERSARIAL_ATTACKS.ipynb), supporting the brain-tumor adversarial-robustness research workflow with VGG16, FGSM, PGD, adversarial training, and robustness evaluation.
 - [Adversarial-Attacks-on-Deep-Learning-Model](https://github.com/Ahmeed1983/Adversarial-Attacks-on-Deep-Learning-Model), associated with the FGSM/PGD L-norm robustness study.
 
